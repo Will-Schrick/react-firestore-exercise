@@ -2,9 +2,9 @@
 //import reactLogo from './assets/react.svg';
 //import viteLogo from '/vite.svg';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './routes/HomePage';
-import SongsPage from './routes/SongsPage';
-import AddSongPage from './routes/AddSongPage';
+import HomePage from '../routes/HomePage.jsx';
+import SongsPage from '../routes/SongsPage.jsx';
+import AddSongPage from '../routes/AddSongPage.jsx';
 import '../App.css';
 
 function App() {

@@ -1,5 +1,14 @@
-import { db, songsCollection } from '../config/firebase';
-import { addDoc, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { db } from '../config/firebase';
+import {
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+} from 'firebase/firestore';
+
+//define songs
+const songsCollection = collection(db, 'Songs');
 
 //  Fetch all songs (Read)
 export const getSongs = async () => {

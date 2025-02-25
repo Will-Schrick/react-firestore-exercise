@@ -15,9 +15,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Firestore instance
-const db = getFirestore(app);
+//const db = getFirestore(app);
 //optional remote config per video we did
 const remoteConfig = getRemoteConfig(app);
 console.log(remoteConfig);
 
-export default { db };
+export const db = getFirestore(app);
