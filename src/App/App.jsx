@@ -1,14 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import { useState } from 'react';
+//import reactLogo from './assets/react.svg';
+//import viteLogo from '/vite.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './routes/HomePage';
+import SongsPage from './routes/SongsPage';
+import AddSongPage from './routes/AddSongPage';
+import '../App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/songs" element={<SongsPage />} />
+        <Route path="/add-song" element={<AddSongPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+/*
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -31,5 +46,4 @@ function App() {
     </>
   )
 }
-
-export default App
+*/

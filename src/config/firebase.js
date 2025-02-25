@@ -1,13 +1,14 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import { getRemoteConfig, fetchAndActivate } from 'firebase/remote-config';
 
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID',
+  apiKey: 'AIzaSyBp9a0BfdOrwqzgVUFQHrFB7z-1oWYJiOs',
+  authDomain: 'react-firestore-exercise.firebaseapp.com',
+  projectId: 'react-firestore-exercise-4ae95',
+  appId: '491623188913',
+  //storageBucket: 'YOUR_STORAGE_BUCKET',
+  //messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
 };
 
 // Initialize Firebase
@@ -15,5 +16,8 @@ const app = initializeApp(firebaseConfig);
 
 // Firestore instance
 const db = getFirestore(app);
+//optional remote config per video we did
+const remoteConfig = getRemoteConfig(app);
+console.log(remoteConfig);
 
-export { db };
+export default { db };
