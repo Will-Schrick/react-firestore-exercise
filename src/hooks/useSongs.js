@@ -3,6 +3,7 @@ import {
   collection,
   addDoc,
   getDocs,
+  updateDoc,
   deleteDoc,
   doc,
 } from 'firebase/firestore';
@@ -25,4 +26,10 @@ export const addSong = async (song) => {
 export const deleteSong = async (id) => {
   const songDoc = doc(db, 'Songs', id);
   await deleteDoc(songDoc);
+};
+
+// Add this export to enable editing
+export const updateSong = async (id, updatedSong) => {
+  const songDoc = doc(db, 'Songs', id);
+  await updateDoc(songDoc, updatedSong);
 };
