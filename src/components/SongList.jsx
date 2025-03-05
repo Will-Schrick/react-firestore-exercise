@@ -26,5 +26,3 @@ const SongList = () => {
     </div>
   );
 };
-
-export default SongList;
