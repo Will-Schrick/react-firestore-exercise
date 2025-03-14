@@ -3,7 +3,7 @@ import { getFirestore } from 'firebase/firestore';
 import { getRemoteConfig, fetchAndActivate } from 'firebase/remote-config';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBp9a0BfdOrwqzgVUFQHrFB7z-1oWYJiOs',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: 'react-firestore-exercise.firebaseapp.com',
   projectId: 'react-firestore-exercise-4ae95',
   appId: '491623188913',
